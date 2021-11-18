@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Productos</title>
+    <link rel="icon" href="cropped-catpaw.png" type="image/png" sizes="12x12">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div id="contTabla">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Existencia</th>
+                            <th>Status</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenido-tabla">
+                    </tbody>
+                </table>
+            </div>
+            <div id="contForm">
+                <h1>Productos</h1>
+                <form id="formu">
+                    <label for="newMarca"><input type="text" id="newMarca" required placeholder="Marca"></label><br>
+                    <label for="newProducto"><input type="text" id="newProducto" required placeholder="Producto"></label><br>
+                    <label for="newPrecio"><input type="number" id="newPrecio" min="0" required placeholder="Precio"></label><br>
+                    <label for="newExistencia"><input type="number" id="newExistencia" min="0" required placeholder="Existencias"></label><br>
+                    <label for="newStatus"><input type="number" id="newStatus" min="-1" max="1" required placeholder="Status"></label><br>
+                </form>
+                <button type="submit" class="botoncito" id="boton-incluir">Agregar producto</button>
+                <button type="submit" class="botoncito" id="boton-actualizar">Actualizar producto</button>
+            </div>
+        </div>
+        <div id='loaderContainer'>
+            <div id='loader'></div>
+        </div>
+    </main>
+    <script src="./js/customFetch/customFetch.js" ></script>
+    <script src="./js/db/producto.js" ></script>
+    <script src="./js/index.js" ></script>
+</body>
+
+</html>

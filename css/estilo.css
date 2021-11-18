@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.788);
+    font-family: 'Pridi', serif;
+    font-size: 16px;
+    margin-top:0;
+    padding-top: 0;
+}
+
+main{
+    position:relative;
+}
+
+h1 {
+    font-family: 'Suez One', serif;
+    margin: 16px 0px 10px 0px;
+    color: #0e6b5c;
+    font-size: 40px;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 68%;
+    grid-template-rows: auto;
+    grid-template-areas: "prod tablita";
+    grid-column-gap: 2%;
+    margin-top: 20px;
+}
+
+#contTabla {
+    grid-area: tablita;
+    text-align: center;
+}
+
+#contForm {
+    grid-area: prod;
+    border: 1px solid rgba(109, 108, 108, 0.76);
+    text-align: center;
+    border-radius: 40px 40px;
+    box-shadow: 4px 4px 5px rgba(109, 108, 108, 0.76);
+    height: fit-content;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+thead {
+    background:linear-gradient(271.63deg, rgb(1, 134, 94) 0%, #047180 100%);
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    border: 1px solid grey;
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    font-family: 'Pridi', serif;
+    font-size: 18px;
+    margin-bottom: 6px;
+    border-radius: 20px 20px;
+    border: 2px solid grey;
+    padding-left: 10px;
+}
+
+input:hover {
+    border-radius: 00px 0px;
+    border: 2px solid #0c7967;
+}
+
+input:focus{
+    border-radius: 0px 0px;
+    border: 2px solid #0e6b5c;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+.botoncito {
+    cursor: pointer;
+    box-shadow: 4px 5px rgba(0, 0, 0, 0.568);
+    font: bold 16px "Ubuntu";
+    text-decoration: none;
+    text-align: center;
+    background:white;
+    color: black;
+    padding: 8px 30px 8px 30px;
+    border: 2px solid #0e6b5c;
+    border-radius: 6px;
+    margin: 20px 0px;
+}
+
+.botoncito:hover {
+    background: #0e6b5c;
+    color: white;
+}
+
+.botoncito:active{
+    box-shadow: inset 4px 4px 4px #033d34;
+    transform: translateY(3px);
+}
+
+#boton-actualizar{
+    display:none;
+}
+
+/*Loader*/
+#loaderContainer{
+    background-color: rgba(15, 15, 15, 0.281);
+    height: 100vh;
+    width: 100vw;
+    position:absolute;
+    top:0;
+    margin:0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader{
+    width: 80px;
+    height:80px;
+    border:10px solid rgba(18, 138, 112, 0.493);
+    border-radius: 50px;
+    border-top:8px solid rgba(22, 122, 101,1);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
