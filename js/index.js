@@ -18,7 +18,8 @@ async function formActualizar(i){
     //btnAgregar.innerText = "Actualizar producto"
     btnActualizar.style.display="inline-block"
     btnAgregar.style.display = "none"
-    btnActualizar.addEventListener('click',  (e)=>  actualizacionProducto(e, i))
+    btnActualizar.onclick = (e)=>actualizacionProducto(e, i);
+    //btnActualizar.addEventListener('click',  (e)=>  actualizacionProducto(e, i))
 }
 
 function llenarTabla(lista) {
